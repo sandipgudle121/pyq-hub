@@ -1,5 +1,6 @@
 let allPapers = [];
 let filteredPapers = [];
+let isLoadingPapers = true;
 
 const fallbackPapers = [
   {
@@ -200,6 +201,37 @@ function showDownloadToast() {
   showToast('✅ Download started!');
 }
 
+function copyCurrentLink() {
+  const url = window.location.href;
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(url).then(() => showToast('🔗 Link copied to clipboard!')).catch(() => showToast('🔗 Copy failed'));
+  } else {
+    showToast('🔗 Copy not supported here');
+  }
+}
+
+function sharePaper() {
+  const title = document.querySelector('.detail-title')?.textContent || 'Paper';
+  const url = window.location.href;
+  if (navigator.share) {
+    navigator.share({ title, url }).catch(() => {});
+  } else {
+    copyCurrentLink();
+  }
+}
+
+function setTheme(theme) {
+  document.body.classList.toggle('theme-dark', theme === 'dark');
+  const toggle = document.getElementById('themeToggle');
+  if (toggle) toggle.textContent = theme === 'dark' ? '☀ Light' : '🌙 Dark';
+  localStorage.setItem('pyqhub-theme', theme);
+}
+
+function toggleTheme() {
+  const next = document.body.classList.contains('theme-dark') ? 'light' : 'dark';
+  setTheme(next);
+}
+
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -252,6 +284,11 @@ function getSortValue() {
 }
 
 function renderBrowse() {
+  if (isLoadingPapers) {
+    const list = document.getElementById('papersList');
+    if (list) list.innerHTML = renderSkeletonCards(4);
+    return;
+  }
   const query = document.getElementById('browseSearch')?.value || '';
   const universities = getFilterValues('filter-university');
   const branches = getFilterValues('filter-branch');
@@ -388,6 +425,10 @@ function renderDetail(paper) {
 }
 
 async function loadPapers() {
+  const list = document.getElementById('papersList');
+  if (list) {
+    list.innerHTML = renderSkeletonCards(4);
+  }
   try {
     const response = await fetch('data/papers.json');
     if (!response.ok) throw new Error('Failed to load JSON');
@@ -395,6 +436,7 @@ async function loadPapers() {
   } catch {
     allPapers = fallbackPapers;
   }
+  isLoadingPapers = false;
   renderBrowse();
   renderDetail(getSelectedPaper());
 }
@@ -431,9 +473,30 @@ function bindBrowseControls() {
     document.querySelector('#filter-exam input[value="End Semester"]').checked = true;
     renderBrowse();
   });
+
+  document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+}
+
+function renderSkeletonCards(count) {
+  return Array.from({ length: count }, () => `
+    <div class="paper-card skeleton-card" aria-hidden="true">
+      <div class="paper-card-icon skeleton-block"></div>
+      <div class="paper-card-body">
+        <div class="skeleton-line skeleton-line-lg"></div>
+        <div class="skeleton-line skeleton-line-md"></div>
+        <div class="paper-card-tags">
+          <span class="skeleton-chip"></span>
+          <span class="skeleton-chip"></span>
+          <span class="skeleton-chip"></span>
+        </div>
+      </div>
+    </div>
+  `).join('');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('pyqhub-theme') || 'light';
+  setTheme(savedTheme);
   bindBrowseControls();
   loadPapers();
 });

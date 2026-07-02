@@ -18,6 +18,7 @@
     <a class="nav-link" href="index.html">Upload</a>
   </div>
   <div class="nav-actions">
+    <button class="btn btn-ghost btn-sm" id="themeToggle" type="button">🌙 Dark</button>
     <a class="btn btn-primary btn-sm" href="index.html">Back to home</a>
   </div>
 </nav>
@@ -47,7 +48,8 @@
         <div class="detail-actions">
           <a class="btn btn-primary" data-download-link href="#" download>⬇ Download PDF</a>
           <a class="btn btn-ghost" href="index.html">↩ Browse more</a>
-          <button class="btn btn-ghost">↗ Share</button>
+          <button class="btn btn-ghost" type="button" onclick="sharePaper()">↗ Share</button>
+          <button class="btn btn-ghost" type="button" onclick="copyCurrentLink()">🔗 Copy link</button>
         </div>
       </div>
     </div>

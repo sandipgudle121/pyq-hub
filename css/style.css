@@ -29,6 +29,19 @@
     --nav-h: 64px;
   }
 
+  body.theme-dark {
+    --surface: #11131a;
+    --surface-1: #0b0d12;
+    --surface-2: #171a23;
+    --border: #2a2f3d;
+    --border-strong: #3a4257;
+    --ink: #f3f5fb;
+    --ink-2: #d7dbea;
+    --ink-3: #a5adbf;
+    --ink-4: #7d8599;
+    background: #080a0f;
+  }
+
   body {
     font-family: var(--font-body);
     color: var(--ink);
@@ -36,6 +49,49 @@
     font-size: 15px;
     line-height: 1.6;
     min-height: 100vh;
+  }
+
+  .theme-dark nav,
+  .theme-dark .uni-card,
+  .theme-dark .subject-chip,
+  .theme-dark .paper-row,
+  .theme-dark .paper-card,
+  .theme-dark .filter-panel,
+  .theme-dark .info-card,
+  .theme-dark .detail-header,
+  .theme-dark .pdf-preview,
+  .theme-dark .form-card {
+    background: #11131a;
+  }
+
+  .theme-dark .search-bar,
+  .theme-dark .search-input-full,
+  .theme-dark .sort-select,
+  .theme-dark .form-input,
+  .theme-dark .form-select,
+  .theme-dark .form-textarea,
+  .theme-dark .file-drop,
+  .theme-dark .auth-card {
+    background: #11131a;
+    color: var(--ink);
+  }
+
+  .theme-dark .hero {
+    background: linear-gradient(135deg, #080a0f 0%, #101520 55%, #11192b 100%);
+  }
+
+  .theme-dark .hero-tag {
+    background: rgba(255,255,255,0.06);
+  }
+
+  .theme-dark .footer-link,
+  .theme-dark .footer-desc,
+  .theme-dark .footer-bottom {
+    color: rgba(255,255,255,0.72);
+  }
+
+  .theme-dark .footer {
+    background: #080a0f;
   }
 
   /* NAV */
@@ -570,6 +626,46 @@
     padding: 20px;
     color: var(--ink-3);
     font-size: 13px;
+  }
+
+  .skeleton-card {
+    pointer-events: none;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+  .skeleton-block,
+  .skeleton-line,
+  .skeleton-chip {
+    background: linear-gradient(90deg, #e8ebf2 0%, #f4f6fb 50%, #e8ebf2 100%);
+    background-size: 200% 100%;
+  }
+  .theme-dark .skeleton-block,
+  .theme-dark .skeleton-line,
+  .theme-dark .skeleton-chip {
+    background: linear-gradient(90deg, #202635 0%, #2d3446 50%, #202635 100%);
+    background-size: 200% 100%;
+  }
+  .skeleton-block {
+    border-radius: 12px;
+    width: 44px;
+    height: 44px;
+  }
+  .skeleton-line {
+    height: 12px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .skeleton-line-lg { width: 70%; }
+  .skeleton-line-md { width: 48%; }
+  .skeleton-chip {
+    display: inline-block;
+    width: 58px;
+    height: 18px;
+    border-radius: 999px;
+    margin-right: 6px;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.65; }
+    50% { opacity: 1; }
   }
 
   /* ── MOBILE ── */
