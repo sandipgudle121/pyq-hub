@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PYQHub — Paper Detail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">📚 <span>PYQ</span>Hub</a>
+  <div class="nav-links">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="index.html">Browse Papers</a>
+    <a class="nav-link" href="index.html">Upload</a>
+  </div>
+  <div class="nav-actions">
+    <a class="btn btn-primary btn-sm" href="index.html">Back to home</a>
+  </div>
+</nav>
+
+<div class="page active" id="page-detail">
+  <div class="detail-page">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="index.html">Browse</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="index.html" data-detail-subject>Subject</a>
+      <span class="breadcrumb-sep">›</span>
+      <span data-detail-exam>Exam</span>
+    </div>
+
+    <div class="detail-header">
+      <div class="detail-icon">📄</div>
+      <div class="detail-info">
+        <div class="detail-title">Loading paper...</div>
+        <div class="detail-meta-row">
+          <span class="badge badge-blue" data-detail-university>University</span>
+          <span class="badge badge-green" data-detail-status>✓ Solved</span>
+          <span class="badge" style="background:var(--surface-2);color:var(--ink-3)" data-detail-downloads>📥 0 downloads</span>
+        </div>
+        <div class="detail-desc">Loading paper details...</div>
+        <div class="detail-actions">
+          <a class="btn btn-primary" data-download-link href="#" download>⬇ Download PDF</a>
+          <a class="btn btn-ghost" href="index.html">↩ Browse more</a>
+          <button class="btn btn-ghost">↗ Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-grid">
+      <div class="info-card">
+        <h3>Paper details</h3>
+        <div class="info-row"><span class="info-row-label">University</span><span class="info-row-value">Loading...</span></div>
+        <div class="info-row"><span class="info-row-label">Branch</span><span class="info-row-value">Loading...</span></div>
+        <div class="info-row"><span class="info-row-label">Semester</span><span class="info-row-value">Loading...</span></div>
+        <div class="info-row"><span class="info-row-label">Year</span><span class="info-row-value">Loading...</span></div>
+        <div class="info-row"><span class="info-row-label">Exam type</span><span class="info-row-value">Loading...</span></div>
+        <div class="info-row"><span class="info-row-label">Subject code</span><span class="info-row-value">Loading...</span></div>
+      </div>
+      <div class="info-card">
+        <h3>File info</h3>
+        <div class="info-row"><span class="info-row-label">Format</span><span class="info-row-value">PDF</span></div>
+        <div class="info-row"><span class="info-row-label">File size</span><span class="info-row-value">Loading...</span></div>
+        <div class="info-row"><span class="info-row-label">Pages</span><span class="info-row-value">Loading...</span></div>
+        <div class="info-row"><span class="info-row-label">Uploaded by</span><span class="info-row-value">PYQHub</span></div>
+        <div class="info-row"><span class="info-row-label">Uploaded on</span><span class="info-row-value">Today</span></div>
+        <div class="info-row"><span class="info-row-label">Downloads</span><span class="info-row-value">0</span></div>
+      </div>
+    </div>
+
+    <div class="pdf-preview" style="margin-top:16px">
+      <div class="pdf-preview-bar">
+        <span class="pdf-preview-title">📄 Preview</span>
+        <a class="btn btn-ghost btn-sm" data-download-link href="#" download>⬇ Download full PDF</a>
+      </div>
+      <div style="padding:0 16px 12px;color:var(--ink-3);font-size:12px" class="pdf-preview-title" data-preview-name>Loading file...</div>
+      <iframe data-pdf-preview title="Paper preview" style="width:100%;height:540px;border:0;background:white"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="success-toast" id="toast">✅ Download started!</div>
+<script src="js/app.js"></script>
+</body>
+</html>

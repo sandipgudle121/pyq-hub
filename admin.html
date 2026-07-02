@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PYQHub Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">📚 <span>PYQ</span>Hub</a>
+  <div class="nav-links">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="detail.html?id=1">Sample Detail</a>
+    <a class="nav-link active" href="admin.html">Admin</a>
+  </div>
+  <div class="nav-actions">
+    <a class="btn btn-primary btn-sm" href="index.html">Back to site</a>
+  </div>
+</nav>
+
+<div class="page active" id="page-admin">
+  <div class="detail-page">
+    <div class="detail-header">
+      <div class="detail-icon">🛠️</div>
+      <div class="detail-info">
+        <div class="detail-title">Admin Helper</div>
+        <div class="detail-desc">
+          This page is intentionally simple. Put the PDF in the right folder, then add one JSON item to <code>data/papers.json</code>.
+        </div>
+        <div class="detail-actions">
+          <a class="btn btn-primary" href="data/papers.json" download>⬇ Download JSON</a>
+          <a class="btn btn-ghost" href="index.html">↩ Open site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-grid">
+      <div class="info-card">
+        <h3>What to add</h3>
+        <div class="info-row"><span class="info-row-label">Title</span><span class="info-row-value">Paper name</span></div>
+        <div class="info-row"><span class="info-row-label">Subject</span><span class="info-row-value">Subject name</span></div>
+        <div class="info-row"><span class="info-row-label">Code</span><span class="info-row-value">Subject code</span></div>
+        <div class="info-row"><span class="info-row-label">University</span><span class="info-row-value">University name</span></div>
+        <div class="info-row"><span class="info-row-label">Semester</span><span class="info-row-value">Numeric semester</span></div>
+        <div class="info-row"><span class="info-row-label">Year</span><span class="info-row-value">Exam year</span></div>
+      </div>
+
+      <div class="info-card">
+        <h3>Where to place files</h3>
+        <div class="info-row"><span class="info-row-label">PDF folder</span><span class="info-row-value">pdfs/.../file.pdf</span></div>
+        <div class="info-row"><span class="info-row-label">JSON file</span><span class="info-row-value">data/papers.json</span></div>
+        <div class="info-row"><span class="info-row-label">Detail page</span><span class="info-row-value">detail.html?id=...</span></div>
+        <div class="info-row"><span class="info-row-label">Browse list</span><span class="info-row-value">Auto rendered</span></div>
+        <div class="info-row"><span class="info-row-label">Download</span><span class="info-row-value">Use real PDF path</span></div>
+        <div class="info-row"><span class="info-row-label">Auth</span><span class="info-row-value">Not needed</span></div>
+      </div>
+    </div>
+
+    <div class="pdf-preview" style="margin-top:16px">
+      <div class="pdf-preview-bar">
+        <span class="pdf-preview-title">Sample JSON entry</span>
+      </div>
+      <div style="padding:20px; background:#fafafa; overflow:auto">
+<pre style="margin:0; font-size:13px; line-height:1.6; color:var(--ink); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; white-space:pre-wrap;">{
+  "id": 9,
+  "title": "Operating Systems",
+  "subject": "Operating Systems",
+  "code": "CS304",
+  "university": "Mumbai University",
+  "branch": "Computer Science",
+  "semester": 4,
+  "exam": "End Semester",
+  "year": 2025,
+  "size": "1.1 MB",
+  "pdf": "pdfs/mumbai/cs/os-endsem-2025.pdf",
+  "tags": ["Solved", "CS"],
+  "solved": true,
+  "downloads": 0,
+  "added": "Today",
+  "notes": "Add your note here."
+}</pre>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
