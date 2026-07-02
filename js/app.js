@@ -422,6 +422,21 @@ function renderDetail(paper) {
   if (statusChip) statusChip.textContent = paper.solved ? '✓ Solved' : 'Unsolved';
   if (downloadsChip) downloadsChip.textContent = `📥 ${paper.downloads?.toLocaleString?.() || '0'} downloads`;
   document.title = `${paper.title} — PYQHub`;
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) metaDescription.setAttribute('content', `${paper.title} question paper for ${paper.university}, ${paper.branch}, semester ${paper.semester}. Download the PDF and preview it online.`);
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  const ogUrl = document.querySelector('meta[property="og:url"]') || document.head.appendChild(document.createElement('meta'));
+  ogUrl.setAttribute('property', 'og:url');
+  ogUrl.setAttribute('content', window.location.href);
+  if (ogTitle) ogTitle.setAttribute('content', `${paper.title} — PYQHub`);
+  if (ogDesc) ogDesc.setAttribute('content', `${paper.university} · ${paper.branch} · ${paper.exam} ${paper.year}`);
+  const twitterTitle = document.querySelector('meta[name="twitter:title"]') || document.head.appendChild(document.createElement('meta'));
+  twitterTitle.setAttribute('name', 'twitter:title');
+  twitterTitle.setAttribute('content', `${paper.title} — PYQHub`);
+  const twitterDesc = document.querySelector('meta[name="twitter:description"]') || document.head.appendChild(document.createElement('meta'));
+  twitterDesc.setAttribute('name', 'twitter:description');
+  twitterDesc.setAttribute('content', `${paper.university} · Semester ${paper.semester} · ${paper.exam} ${paper.year}`);
 }
 
 async function loadPapers() {
