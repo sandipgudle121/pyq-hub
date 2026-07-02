@@ -31,7 +31,7 @@
       <div class="detail-info">
         <div class="detail-title">Admin Helper</div>
         <div class="detail-desc">
-          This page is intentionally simple. Put the PDF in the right folder, then add one JSON item to <code>data/papers.json</code>.
+          This page is intentionally simple. Put the PDF in the right folder, then add one JSON item to <code>data/papers.json</code> for either BSc or MSc.
         </div>
         <div class="detail-actions">
           <a class="btn btn-primary" href="data/papers.json" download>⬇ Download JSON</a>
@@ -44,16 +44,16 @@
       <div class="info-card">
         <h3>What to add</h3>
         <div class="info-row"><span class="info-row-label">Title</span><span class="info-row-value">Paper name</span></div>
-        <div class="info-row"><span class="info-row-label">Subject</span><span class="info-row-value">Subject name</span></div>
+        <div class="info-row"><span class="info-row-label">Program</span><span class="info-row-value">BSc, MSc or BTech</span></div>
         <div class="info-row"><span class="info-row-label">Code</span><span class="info-row-value">Subject code</span></div>
-        <div class="info-row"><span class="info-row-label">University</span><span class="info-row-value">University name</span></div>
+        <div class="info-row"><span class="info-row-label">University</span><span class="info-row-value">Your university</span></div>
         <div class="info-row"><span class="info-row-label">Semester</span><span class="info-row-value">Numeric semester</span></div>
         <div class="info-row"><span class="info-row-label">Year</span><span class="info-row-value">Exam year</span></div>
       </div>
 
       <div class="info-card">
         <h3>Where to place files</h3>
-        <div class="info-row"><span class="info-row-label">PDF folder</span><span class="info-row-value">pdfs/.../file.pdf</span></div>
+        <div class="info-row"><span class="info-row-label">PDF folder</span><span class="info-row-value">pdfs/bsc/... pdfs/msc/... pdfs/btech/...</span></div>
         <div class="info-row"><span class="info-row-label">JSON file</span><span class="info-row-value">data/papers.json</span></div>
         <div class="info-row"><span class="info-row-label">Detail page</span><span class="info-row-value">detail.html?id=...</span></div>
         <div class="info-row"><span class="info-row-label">Browse list</span><span class="info-row-value">Auto rendered</span></div>
@@ -69,17 +69,20 @@
       <div style="padding:20px; background:#fafafa; overflow:auto">
 <pre style="margin:0; font-size:13px; line-height:1.6; color:var(--ink); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; white-space:pre-wrap;">{
   "id": 9,
-  "title": "Operating Systems",
-  "subject": "Operating Systems",
-  "code": "CS304",
-  "university": "Mumbai University",
-  "branch": "Computer Science",
-  "semester": 4,
+  "title": "Your paper title",
+  "subject": "Your subject",
+  "code": "SUB101",
+  "university": "Your university",
+  "program": "BSc",
+  "stream": "Science",
+  "subject": "Physics",
+  "branch": "Science",
+  "semester": 1,
   "exam": "End Semester",
   "year": 2025,
   "size": "1.1 MB",
-  "pdf": "pdfs/mumbai/cs/os-endsem-2025.pdf",
-  "tags": ["Solved", "CS"],
+  "pdf": "pdfs/bsc/your-paper.pdf",
+  "tags": ["BSc", "Upload later"],
   "solved": true,
   "downloads": 0,
   "added": "Today",

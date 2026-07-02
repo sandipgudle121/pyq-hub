@@ -37,9 +37,9 @@
 
   <div class="hero">
     <div class="hero-content">
-      <div class="hero-badge">✨ 12,000+ papers across 200+ colleges</div>
+      <div class="hero-badge">✨ BSc and MSc PYQs only</div>
       <h1>Find your <span>previous year</span> question papers — fast</h1>
-      <p>Search by subject, university, or exam. Download instantly. Study smarter.</p>
+      <p>Right now the site is set up for BSc and MSc papers. Upload your PDFs later and the list will grow from there.</p>
       <div class="search-bar">
         <input type="text" placeholder="Search by subject, paper code, or topic…" id="hero-search" onkeydown="if(event.key==='Enter'){showPage('browse');setActive('nav-browse')}">
         <button class="search-btn" onclick="showPage('browse');setActive('nav-browse')">🔍 Search</button>
@@ -59,8 +59,8 @@
       <span class="stat-lbl">Universities</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">0</span>
-      <span class="stat-lbl">Subjects</span>
+      <span class="stat-num">2</span>
+      <span class="stat-lbl">Programs</span>
     </div>
     <div class="stat-item">
       <span class="stat-num">0</span>
@@ -70,30 +70,31 @@
 
   <div class="section">
     <div class="section-header">
-      <h2 class="section-title">Browse by university</h2>
+      <h2 class="section-title">Browse by program</h2>
       <span class="section-link" onclick="showPage('browse');setActive('nav-browse')">See all →</span>
     </div>
     
       <div class="uni-card" onclick="showPage('browse');setActive('nav-browse')">
         <div class="uni-icon" style="background:#dcfce7">🏛️</div>
-        <div class="uni-name">Pune University</div>
-        <div class="uni-count">0 papers</div>
+        <div class="uni-name">BSc</div>
+        <div class="uni-count">Ready for upload</div>
       </div>
       
       <div class="uni-card" onclick="showPage('browse');setActive('nav-browse')">
         <div class="uni-icon" style="background:#faf5ff">⚙️</div>
-        <div class="uni-name">SRTMUN Nanded University</div>
-        <div class="uni-count">0 papers</div>
+        <div class="uni-name">MSc</div>
+        <div class="uni-count">Ready for upload</div>
       </div>
     </div>
   </div>
 
   <div class="section" style="padding-top: 0">
-    <div class="section-header">
-      <h2 class="section-title">Popular subjects</h2>
+      <div class="section-header">
+      <h2 class="section-title">What you can upload</h2>
     </div>
     <div class="subject-grid">
-      <!-- <div class="subject-chip" onclick="showPage('browse');setActive('nav-browse')"><span class="chip-icon">🖥️</span><span class="subject-name">Data Structures</span></div> -->
+      <div class="subject-chip"><span class="chip-icon">🎓</span><span class="subject-name">BSc papers</span></div>
+      <div class="subject-chip"><span class="chip-icon">🔬</span><span class="subject-name">MSc papers</span></div>
     </div>
   </div>
 
@@ -106,44 +107,44 @@
       <div class="paper-row" onclick="showPage('detail');setActive('nav-browse')">
         <div class="paper-icon">📄</div>
         <div class="paper-info">
-          <div class="paper-title">Data Structures & Algorithms — End Sem 2023</div>
-          <div class="paper-meta">Mumbai University · CS/IT · Sem 3 · Added 2 days ago</div>
+          <div class="paper-title">No papers uploaded yet</div>
+          <div class="paper-meta">Upload your BSc or MSc PYQs from the upload section.</div>
         </div>
         <div class="paper-actions">
-          <span class="badge badge-green">Solved</span>
+          <span class="badge badge-blue">Ready</span>
           <div class="download-btn" title="Download">⬇</div>
         </div>
       </div>
       <div class="paper-row" onclick="showPage('detail');setActive('nav-browse')">
         <div class="paper-icon">📄</div>
         <div class="paper-info">
-          <div class="paper-title">Engineering Mathematics II — Mid Sem 2024</div>
-          <div class="paper-meta">VTU Karnataka · All Branches · Sem 2 · Added 4 days ago</div>
+          <div class="paper-title">BSc paper placeholder</div>
+          <div class="paper-meta">Use this space for your first BSc PYQ.</div>
         </div>
         <div class="paper-actions">
-          <span class="badge badge-amber">Unsolved</span>
+          <span class="badge badge-amber">Waiting</span>
           <div class="download-btn" title="Download">⬇</div>
         </div>
       </div>
       <div class="paper-row" onclick="showPage('detail');setActive('nav-browse')">
         <div class="paper-icon">📄</div>
         <div class="paper-info">
-          <div class="paper-title">Thermodynamics — End Sem 2023</div>
-          <div class="paper-meta">Pune University · Mechanical · Sem 4 · Added 1 week ago</div>
+          <div class="paper-title">MSc paper placeholder</div>
+          <div class="paper-meta">Use this space for your first MSc PYQ.</div>
         </div>
         <div class="paper-actions">
-          <span class="badge badge-green">Solved</span>
+          <span class="badge badge-green">Ready</span>
           <div class="download-btn" title="Download">⬇</div>
         </div>
       </div>
       <div class="paper-row" onclick="showPage('detail');setActive('nav-browse')">
         <div class="paper-icon">📄</div>
         <div class="paper-info">
-          <div class="paper-title">Computer Networks — End Sem 2022</div>
-          <div class="paper-meta">Anna University · CS · Sem 5 · Added 1 week ago</div>
+          <div class="paper-title">Upload section ready</div>
+          <div class="paper-meta">Add PDFs later and they’ll appear here automatically.</div>
         </div>
         <div class="paper-actions">
-          <span class="badge badge-blue">With Notes</span>
+          <span class="badge badge-blue">Upload later</span>
           <div class="download-btn" title="Download">⬇</div>
         </div>
       </div>
@@ -154,13 +155,13 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">📚 PYQ<span>Hub</span></div>
-        <div class="footer-desc">Free previous year question papers for Indian college students. Study smarter, score better.</div>
+        <div class="footer-desc">A simple BSc and MSc PYQ hub. Add your own PDFs later from the upload section.</div>
       </div>
       <div>
         <div class="footer-heading">Explore</div>
         <a class="footer-link" onclick="showPage('browse');setActive('nav-browse')">Browse papers</a>
-        <a class="footer-link" onclick="showPage('browse');setActive('nav-browse')">Universities</a>
-        <a class="footer-link" onclick="showPage('browse');setActive('nav-browse')">Subjects</a>
+        <a class="footer-link" onclick="showPage('browse');setActive('nav-browse')">BSc</a>
+        <a class="footer-link" onclick="showPage('browse');setActive('nav-browse')">MSc</a>
       </div>
       <div>
         <div class="footer-heading">Contribute</div>
@@ -187,38 +188,28 @@
 
       <div class="filter-group">
         <div class="filter-group-label">University</div>
-        <label class="filter-option"><input type="checkbox" checked> Mumbai University</label>
-        <label class="filter-option"><input type="checkbox"> Pune University</label>
-        <label class="filter-option"><input type="checkbox"> VTU Karnataka</label>
-        <label class="filter-option"><input type="checkbox"> Anna University</label>
-        <label class="filter-option"><input type="checkbox"> Delhi University</label>
+        <label class="filter-option"><input type="checkbox" checked> BSc</label>
+        <label class="filter-option"><input type="checkbox"> MSc</label>
       </div>
 
       <div class="filter-group">
         <div class="filter-group-label">Branch / Stream</div>
-        <label class="filter-option"><input type="checkbox" checked> Computer Science</label>
-        <label class="filter-option"><input type="checkbox"> Electronics</label>
-        <label class="filter-option"><input type="checkbox"> Mechanical</label>
-        <label class="filter-option"><input type="checkbox"> Civil</label>
-        <label class="filter-option"><input type="checkbox"> Commerce</label>
-        <label class="filter-option"><input type="checkbox"> Science</label>
+        <label class="filter-option"><input type="checkbox" checked> BSc</label>
+        <label class="filter-option"><input type="checkbox"> MSc</label>
       </div>
 
       <div class="filter-group">
         <div class="filter-group-label">Semester</div>
-        <label class="filter-option"><input type="checkbox"> Sem 1</label>
+        <label class="filter-option"><input type="checkbox" checked> Sem 1</label>
         <label class="filter-option"><input type="checkbox"> Sem 2</label>
-        <label class="filter-option"><input type="checkbox" checked> Sem 3</label>
+        <label class="filter-option"><input type="checkbox"> Sem 3</label>
         <label class="filter-option"><input type="checkbox"> Sem 4</label>
-        <label class="filter-option"><input type="checkbox"> Sem 5</label>
-        <label class="filter-option"><input type="checkbox"> Sem 6</label>
       </div>
 
       <div class="filter-group">
         <div class="filter-group-label">Exam Type</div>
         <label class="filter-option"><input type="checkbox" checked> End Semester</label>
         <label class="filter-option"><input type="checkbox"> Mid Semester</label>
-        <label class="filter-option"><input type="checkbox"> Internal</label>
       </div>
 
       <div class="filter-group">
@@ -233,30 +224,29 @@
     <!-- Results -->
     <div>
       <div class="search-input-row">
-        <input class="search-input-full" type="text" placeholder="Search papers…" value="Data Structures">
+        <input class="search-input-full" type="text" placeholder="Search BSc or MSc papers…" value="">
         <button class="btn btn-primary" onclick="">Search</button>
       </div>
 
       <div class="results-header">
-        <div class="results-count">Showing <span>24 results</span> for "Data Structures"</div>
+        <div class="results-count">Showing <span>0 results</span></div>
         <select class="sort-select">
           <option>Newest first</option>
-          <option>Most downloaded</option>
-          <option>Year: latest</option>
-          <option>Year: oldest</option>
+          <option>Subject A-Z</option>
+          <option>Subject Z-A</option>
         </select>
       </div>
 
-      <div class="paper-card" onclick="showPage('detail');setActive('nav-browse')">
+      <div class="paper-card" onclick="showPage('upload');setActive('nav-upload')">
         <div class="paper-card-icon">📄</div>
         <div class="paper-card-body">
-          <div class="paper-card-title">Data Structures & Algorithms — End Semester 2023</div>
-          <div class="paper-card-sub">Mumbai University · Computer Science · Semester 3</div>
+          <div class="paper-card-title">No papers uploaded yet</div>
+          <div class="paper-card-sub">Add your first BSc or MSc paper from the upload section.</div>
           <div class="paper-card-tags">
-            <span class="tag">2023</span>
-            <span class="tag">End Sem</span>
-            <span class="tag">CS/IT</span>
-            <span class="badge badge-green" style="font-size:11px">✓ Solved</span>
+            <span class="tag">BSc</span>
+            <span class="tag">MSc</span>
+            <span class="tag">Upload later</span>
+            <span class="badge badge-blue" style="font-size:11px">Ready</span>
           </div>
         </div>
         <div class="paper-card-actions">
@@ -264,16 +254,16 @@
         </div>
       </div>
 
-      <div class="paper-card" onclick="showPage('detail');setActive('nav-browse')">
+      <div class="paper-card" onclick="showPage('upload');setActive('nav-upload')">
         <div class="paper-card-icon">📄</div>
         <div class="paper-card-body">
-          <div class="paper-card-title">Advanced Data Structures — Mid Sem 2024</div>
-          <div class="paper-card-sub">Mumbai University · Computer Science · Semester 5</div>
+          <div class="paper-card-title">BSc paper placeholder</div>
+          <div class="paper-card-sub">Use this card after uploading your first BSc PDF.</div>
           <div class="paper-card-tags">
-            <span class="tag">2024</span>
-            <span class="tag">Mid Sem</span>
-            <span class="tag">CS</span>
-            <span class="badge badge-amber" style="font-size:11px">Unsolved</span>
+            <span class="tag">BSc</span>
+            <span class="tag">Upload later</span>
+            <span class="tag">PDF</span>
+            <span class="badge badge-amber" style="font-size:11px">Waiting</span>
           </div>
         </div>
         <div class="paper-card-actions">
@@ -281,16 +271,16 @@
         </div>
       </div>
 
-      <div class="paper-card" onclick="showPage('detail');setActive('nav-browse')">
+      <div class="paper-card" onclick="showPage('upload');setActive('nav-upload')">
         <div class="paper-card-icon">📄</div>
         <div class="paper-card-body">
-          <div class="paper-card-title">Data Structures — End Semester 2022</div>
-          <div class="paper-card-sub">VTU Karnataka · CS & IS · Semester 3</div>
+          <div class="paper-card-title">MSc paper placeholder</div>
+          <div class="paper-card-sub">Use this card after uploading your first MSc PDF.</div>
           <div class="paper-card-tags">
-            <span class="tag">2022</span>
-            <span class="tag">End Sem</span>
-            <span class="tag">VTU</span>
-            <span class="badge badge-blue" style="font-size:11px">With Notes</span>
+            <span class="tag">MSc</span>
+            <span class="tag">Upload later</span>
+            <span class="tag">PDF</span>
+            <span class="badge badge-blue" style="font-size:11px">Ready</span>
           </div>
         </div>
         <div class="paper-card-actions">
@@ -298,16 +288,16 @@
         </div>
       </div>
 
-      <div class="paper-card" onclick="showPage('detail');setActive('nav-browse')">
+      <div class="paper-card" onclick="showPage('upload');setActive('nav-upload')">
         <div class="paper-card-icon">📄</div>
         <div class="paper-card-body">
-          <div class="paper-card-title">DS & Algorithms — End Semester 2021</div>
-          <div class="paper-card-sub">Anna University · CS · Semester 4</div>
+          <div class="paper-card-title">Upload section ready</div>
+          <div class="paper-card-sub">Your uploaded BSc and MSc papers will appear here.</div>
           <div class="paper-card-tags">
-            <span class="tag">2021</span>
-            <span class="tag">End Sem</span>
-            <span class="tag">Anna Univ</span>
-            <span class="badge badge-green" style="font-size:11px">✓ Solved</span>
+            <span class="tag">Upload</span>
+            <span class="tag">BSc</span>
+            <span class="tag">MSc</span>
+            <span class="badge badge-green" style="font-size:11px">Later</span>
           </div>
         </div>
         <div class="paper-card-actions">
@@ -332,23 +322,23 @@
       <span class="breadcrumb-sep">›</span>
       <a onclick="showPage('browse');setActive('nav-browse')">Data Structures</a>
       <span class="breadcrumb-sep">›</span>
-      <span>End Sem 2023</span>
+      <span>Upload later</span>
     </div>
 
     <div class="detail-header">
       <div class="detail-icon">📄</div>
       <div class="detail-info">
-        <div class="detail-title">Data Structures & Algorithms — End Semester 2023</div>
+        <div class="detail-title">No paper selected yet</div>
         <div class="detail-meta-row">
-          <span class="badge badge-blue">Mumbai University</span>
-          <span class="badge badge-green">✓ Solved</span>
-          <span class="badge" style="background:var(--surface-2);color:var(--ink-3)">📥 1,240 downloads</span>
+          <span class="badge badge-blue">BSc / MSc</span>
+          <span class="badge badge-green">Ready to upload</span>
+          <span class="badge" style="background:var(--surface-2);color:var(--ink-3)">📥 0 downloads</span>
         </div>
         <div class="detail-desc">
-          End semester examination paper for Computer Science students (Semester 3). Covers arrays, linked lists, stacks, queues, trees, graphs, and sorting algorithms. Solution key included.
+          Upload a BSc or MSc paper from the upload section when you have the PDF ready.
         </div>
         <div class="detail-actions">
-          <button class="btn btn-primary" onclick="showDownloadToast()">⬇ Download PDF</button>
+          <button class="btn btn-primary" onclick="showPage('upload');setActive('nav-upload')">⬇ Add paper</button>
           <button class="btn btn-ghost">🔖 Bookmark</button>
           <button class="btn btn-ghost">↗ Share</button>
         </div>
@@ -358,28 +348,28 @@
     <div class="detail-grid">
       <div class="info-card">
         <h3>Paper details</h3>
-        <div class="info-row"><span class="info-row-label">University</span><span class="info-row-value">Mumbai University</span></div>
-        <div class="info-row"><span class="info-row-label">Branch</span><span class="info-row-value">Computer Science / IT</span></div>
-        <div class="info-row"><span class="info-row-label">Semester</span><span class="info-row-value">3rd Semester</span></div>
-        <div class="info-row"><span class="info-row-label">Year</span><span class="info-row-value">2023</span></div>
-        <div class="info-row"><span class="info-row-label">Exam type</span><span class="info-row-value">End Semester</span></div>
-        <div class="info-row"><span class="info-row-label">Subject code</span><span class="info-row-value">CSC301</span></div>
+        <div class="info-row"><span class="info-row-label">Program</span><span class="info-row-value">BSc / MSc</span></div>
+        <div class="info-row"><span class="info-row-label">Branch</span><span class="info-row-value">Add later</span></div>
+        <div class="info-row"><span class="info-row-label">Semester</span><span class="info-row-value">Add later</span></div>
+        <div class="info-row"><span class="info-row-label">Year</span><span class="info-row-value">Add later</span></div>
+        <div class="info-row"><span class="info-row-label">Exam type</span><span class="info-row-value">Add later</span></div>
+        <div class="info-row"><span class="info-row-label">Subject code</span><span class="info-row-value">Add later</span></div>
       </div>
       <div class="info-card">
         <h3>File info</h3>
         <div class="info-row"><span class="info-row-label">Format</span><span class="info-row-value">PDF</span></div>
-        <div class="info-row"><span class="info-row-label">File size</span><span class="info-row-value">1.2 MB</span></div>
-        <div class="info-row"><span class="info-row-label">Pages</span><span class="info-row-value">4</span></div>
-        <div class="info-row"><span class="info-row-label">Uploaded by</span><span class="info-row-value">Rahul M.</span></div>
-        <div class="info-row"><span class="info-row-label">Uploaded on</span><span class="info-row-value">12 Jan 2024</span></div>
-        <div class="info-row"><span class="info-row-label">Downloads</span><span class="info-row-value">1,240</span></div>
+        <div class="info-row"><span class="info-row-label">File size</span><span class="info-row-value">Add later</span></div>
+        <div class="info-row"><span class="info-row-label">Pages</span><span class="info-row-value">Add later</span></div>
+        <div class="info-row"><span class="info-row-label">Uploaded by</span><span class="info-row-value">You</span></div>
+        <div class="info-row"><span class="info-row-label">Uploaded on</span><span class="info-row-value">Later</span></div>
+        <div class="info-row"><span class="info-row-label">Downloads</span><span class="info-row-value">0</span></div>
       </div>
     </div>
 
     <div class="pdf-preview" style="margin-top:16px">
       <div class="pdf-preview-bar">
-        <span class="pdf-preview-title">📄 DSA_EndSem_2023_MU.pdf — Preview</span>
-        <button class="btn btn-ghost btn-sm" onclick="showDownloadToast()">⬇ Download full PDF</button>
+        <span class="pdf-preview-title">📄 No preview yet</span>
+        <button class="btn btn-ghost btn-sm" onclick="showPage('upload');setActive('nav-upload')">⬇ Upload PDF</button>
       </div>
       <div class="pdf-mock">
         <div class="pdf-line heading dark" style="width:60%;margin:0 auto 20px"></div>
@@ -395,7 +385,7 @@
         <div class="pdf-line" style="width:72%"></div>
         <div class="pdf-line" style="width:88%"></div>
         <div class="pdf-mock-overlay" style="color:var(--ink-4);font-size:12px;margin-top:4px">
-          Download the PDF to view all questions and solution key
+          Upload the PDF later to preview the paper here
         </div>
       </div>
     </div>
@@ -410,34 +400,41 @@
 
     <div class="form-card">
       <div class="form-group">
-        <label class="form-label">University <span>*</span></label>
+        <label class="form-label">Program <span>*</span></label>
         <select class="form-select">
-          <option value="">Select university…</option>
-          <option>Mumbai University</option>
-          <option>Pune University (SPPU)</option>
-          <option>VTU Karnataka</option>
-          <option>Anna University</option>
-          <option>Delhi University</option>
-          <option>RGPV Bhopal</option>
-          <option>Other (type below)</option>
+          <option value="">Select program…</option>
+          <option>BSc</option>
+          <option>MSc</option>
+          <option>BTech</option>
         </select>
       </div>
 
       <div class="form-row">
         <div class="form-group">
-          <label class="form-label">Branch / Stream <span>*</span></label>
+          <label class="form-label">Stream <span>*</span></label>
           <select class="form-select">
-            <option value="">Select branch…</option>
+            <option value="">Select stream…</option>
+            <option>BSc</option>
+            <option>MSc</option>
+            <option>BTech</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject <span>*</span></label>
+          <select class="form-select">
+            <option value="">Select subject…</option>
+            <option>Physics</option>
+            <option>Chemistry</option>
+            <option>Mathematics</option>
             <option>Computer Science</option>
-            <option>Electronics & Telecom</option>
-            <option>Mechanical</option>
-            <option>Civil</option>
-            <option>Electrical</option>
-            <option>Information Technology</option>
+            <option>Biology</option>
             <option>Commerce</option>
             <option>Science</option>
           </select>
         </div>
+      </div>
+
+      <div class="form-row">
         <div class="form-group">
           <label class="form-label">Semester <span>*</span></label>
           <select class="form-select">
@@ -452,27 +449,25 @@
             <option>Semester 8</option>
           </select>
         </div>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Subject name <span>*</span></label>
-        <input class="form-input" type="text" placeholder="e.g. Data Structures & Algorithms">
+        <div class="form-group">
+          <label class="form-label">Paper title <span>*</span></label>
+          <input class="form-input" type="text" placeholder="e.g. Physics Semester 2">
+        </div>
       </div>
 
       <div class="form-row">
         <div class="form-group">
           <label class="form-label">Subject code</label>
-          <input class="form-input" type="text" placeholder="e.g. CSC301">
+          <input class="form-input" type="text" placeholder="e.g. PHY201">
         </div>
         <div class="form-group">
           <label class="form-label">Exam year <span>*</span></label>
           <select class="form-select">
+            <option>2025</option>
             <option>2024</option>
             <option>2023</option>
             <option>2022</option>
             <option>2021</option>
-            <option>2020</option>
-            <option>2019</option>
           </select>
         </div>
       </div>
@@ -484,7 +479,6 @@
             <option>End Semester</option>
             <option>Mid Semester</option>
             <option>Internal Assessment</option>
-            <option>Practical Exam</option>
           </select>
         </div>
         <div class="form-group">
@@ -516,7 +510,7 @@
 
       <div class="form-group">
         <label class="form-label">Notes (optional)</label>
-        <textarea class="form-textarea" placeholder="Anything useful to tell other students? e.g. 'Focused heavily on trees and graphs', 'Units 1–3 only'"></textarea>
+        <textarea class="form-textarea" placeholder="Anything useful to tell other students? e.g. 'Theory paper', 'Includes numerical problems', 'Unit 1-3 only'"></textarea>
       </div>
 
       <button class="btn btn-primary" style="width:100%;justify-content:center;padding:12px" onclick="submitUpload()">

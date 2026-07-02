@@ -2,152 +2,7 @@ let allPapers = [];
 let filteredPapers = [];
 let isLoadingPapers = true;
 
-const fallbackPapers = [
-  {
-    id: 1,
-    title: "Data Structures & Algorithms",
-    subject: "Data Structures",
-    code: "CS301",
-    university: "Mumbai University",
-    branch: "Computer Science",
-    semester: 3,
-    exam: "End Semester",
-    year: 2023,
-    size: "1.2 MB",
-    pdf: "pdfs/mumbai/cs/dsa-endsem-2023.pdf",
-    tags: ["Solved", "CS/IT"],
-    solved: true,
-    downloads: 1240,
-    added: "2 days ago",
-    notes: "Solution key included."
-  },
-  {
-    id: 2,
-    title: "Advanced Data Structures",
-    subject: "Data Structures",
-    code: "CS501",
-    university: "Mumbai University",
-    branch: "Computer Science",
-    semester: 5,
-    exam: "Mid Semester",
-    year: 2024,
-    size: "1.0 MB",
-    pdf: "pdfs/mumbai/cs/ads-midsem-2024.pdf",
-    tags: ["Unsolved", "CS"],
-    solved: false,
-    downloads: 812,
-    added: "4 days ago",
-    notes: "Mid sem question paper."
-  },
-  {
-    id: 3,
-    title: "Data Structures",
-    subject: "Data Structures",
-    code: "CS301",
-    university: "VTU Karnataka",
-    branch: "Computer Science",
-    semester: 3,
-    exam: "End Semester",
-    year: 2022,
-    size: "900 KB",
-    pdf: "pdfs/vtu/cs/ds-endsem-2022.pdf",
-    tags: ["With Notes", "VTU"],
-    solved: true,
-    downloads: 650,
-    added: "1 week ago",
-    notes: "Handwritten notes attached."
-  },
-  {
-    id: 4,
-    title: "DS & Algorithms",
-    subject: "Data Structures",
-    code: "CS401",
-    university: "Anna University",
-    branch: "Computer Science",
-    semester: 4,
-    exam: "End Semester",
-    year: 2021,
-    size: "1.4 MB",
-    pdf: "pdfs/anna/cs/dsa-endsem-2021.pdf",
-    tags: ["Solved", "Anna Univ"],
-    solved: true,
-    downloads: 980,
-    added: "1 week ago",
-    notes: "Frequently repeated questions."
-  },
-  {
-    id: 5,
-    title: "DBMS Winter 2025",
-    subject: "DBMS",
-    code: "CS302",
-    university: "Pune University",
-    branch: "Computer Science",
-    semester: 3,
-    exam: "Winter",
-    year: 2025,
-    size: "1.3 MB",
-    pdf: "pdfs/sppu/cs/dbms-winter-2025.pdf",
-    tags: ["Solved", "SPPU"],
-    solved: true,
-    downloads: 1430,
-    added: "Today",
-    notes: "Contains SQL and normalization sections."
-  },
-  {
-    id: 6,
-    title: "DBMS Summer 2024",
-    subject: "DBMS",
-    code: "CS302",
-    university: "Pune University",
-    branch: "Computer Science",
-    semester: 3,
-    exam: "Summer",
-    year: 2024,
-    size: "1.1 MB",
-    pdf: "pdfs/sppu/cs/dbms-summer-2024.pdf",
-    tags: ["Unsolved", "SPPU"],
-    solved: false,
-    downloads: 754,
-    added: "3 days ago",
-    notes: "Good for exam pattern practice."
-  },
-  {
-    id: 7,
-    title: "Engineering Mathematics II",
-    subject: "Engineering Maths",
-    code: "MA201",
-    university: "VTU Karnataka",
-    branch: "Electronics",
-    semester: 2,
-    exam: "Mid Semester",
-    year: 2024,
-    size: "1.0 MB",
-    pdf: "pdfs/vtu/elec/em2-midsem-2024.pdf",
-    tags: ["Unsolved", "VTU"],
-    solved: false,
-    downloads: 540,
-    added: "4 days ago",
-    notes: "Calculus-heavy paper."
-  },
-  {
-    id: 8,
-    title: "Thermodynamics",
-    subject: "Thermodynamics",
-    code: "ME204",
-    university: "Pune University",
-    branch: "Mechanical",
-    semester: 4,
-    exam: "End Semester",
-    year: 2023,
-    size: "1.5 MB",
-    pdf: "pdfs/sppu/me/thermo-endsem-2023.pdf",
-    tags: ["Solved", "Mechanical"],
-    solved: true,
-    downloads: 1090,
-    added: "1 week ago",
-    notes: "Covers Rankine cycle and entropy."
-  }
-];
+const fallbackPapers = [];
 
 function showPage(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -256,7 +111,7 @@ function getFilterValues(containerId) {
 function getSelectedPaper() {
   const params = new URLSearchParams(window.location.search);
   const id = Number(params.get('id'));
-  return allPapers.find(p => p.id === id) || filteredPapers[0] || allPapers[0] || fallbackPapers[0];
+  return allPapers.find(p => p.id === id) || filteredPapers[0] || allPapers[0] || null;
 }
 
 function matchesQuery(paper, query) {
@@ -482,9 +337,9 @@ function bindBrowseControls() {
     });
     if (solved) solved.checked = false;
     if (browseSearch) browseSearch.value = '';
-    document.querySelector('#filter-university input[value="Mumbai University"]').checked = true;
-    document.querySelector('#filter-branch input[value="Computer Science"]').checked = true;
-    document.querySelector('#filter-semester input[value="3"]').checked = true;
+    document.querySelector('#filter-university input[value="BSc"]').checked = true;
+    document.querySelector('#filter-branch input[value="BSc"]').checked = true;
+    document.querySelector('#filter-semester input[value="1"]').checked = true;
     document.querySelector('#filter-exam input[value="End Semester"]').checked = true;
     renderBrowse();
   });
@@ -509,9 +364,20 @@ function renderSkeletonCards(count) {
   `).join('');
 }
 
+function updateEmptyBrowseCopy() {
+  const empty = document.getElementById('emptyState');
+  if (!empty) return;
+  empty.innerHTML = `
+    <div style="font-size:40px;margin-bottom:10px">📄</div>
+    <div style="font-weight:700;color:var(--ink);margin-bottom:4px">No papers added yet.</div>
+    <div>Upload your BSc or MSc PYQs later from the upload section.</div>
+  `;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('pyqhub-theme') || 'light';
   setTheme(savedTheme);
   bindBrowseControls();
+  updateEmptyBrowseCopy();
   loadPapers();
 });
